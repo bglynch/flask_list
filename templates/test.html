@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SHopping List</title>
+</head>
+<body>
+    <h1>My To Do List</h1>
+    <form method='POST' action='/new_to_do' >
+        <input type="text" name="add_to_do"/>
+        <input type="submit" value="Add Task"/>
+    </form>
+    {% for task in tasks %}
+        <p><span>{{ task.time}}:  </span>{{ task.name}}</p>
+    {% endfor %}
+</body>
+</html>
